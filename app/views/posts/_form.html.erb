@@ -14,6 +14,17 @@
      <%= f.label :rationale %>	
      <%= f.text_area :rationale, class: "form-control"  %>
 </div>
+  <div class="form-group">
+    <%= f.radio_button :status, 'submitted' %>
+    <%= f.label :status, 'Submitted request' %>
+
+    <%= f.radio_button :status, 'approved' %>
+    <%= f.label :status, 'Approve request' %>
+
+    <%= f.radio_button :status, 'rejected' %>
+    <%= f.label :status, 'Reject request' %>
+  </div>
+  
 
 
    <%= f.submit 'Save Post', class: "btn btn-block btn-primary" %>
