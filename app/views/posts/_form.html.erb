@@ -14,17 +14,9 @@
      <%= f.label :rationale %>	
      <%= f.text_area :rationale, class: "form-control"  %>
 </div>
-  <div class="form-group">
-    <%= f.radio_button :status, 'submitted' %>
-    <%= f.label :status, 'Submitted request' %>
-
-    <%= f.radio_button :status, 'approved' %>
-    <%= f.label :status, 'Approve request' %>
-
-    <%= f.radio_button :status, 'rejected' %>
-    <%= f.label :status, 'Reject request' %>
-  </div>
   
+  
+  <%= render partial: 'status', locals: { f: f } if current_user.type == 'AdminUser' %>
 
 
    <%= f.submit 'Save Post', class: "btn btn-block btn-primary" %>
