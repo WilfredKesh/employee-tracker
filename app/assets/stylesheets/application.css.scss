@@ -17,3 +17,8 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "posts.scss";
+@import "gritter";
+
+#growl{
+    margin-top: 50px;
+}
