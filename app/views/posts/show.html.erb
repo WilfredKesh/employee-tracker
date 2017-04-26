@@ -1,4 +1,16 @@
-<h1>Sample post </h1>
 
 
-<%= @post.inspect %>
+<div class="container">
+
+	<div class="card">
+		<h3><span>Employee:</span> <%= @post.user.full_name %></h3>
+	</div>
+
+	<div>
+		<h3><span>Date:</span> <%= @post.date %></h3>
+	</div>
+
+    <%= link_to 'Edit', edit_post_path(@post), class: 'btn btn-primary'  %>
+
+</div>
+
