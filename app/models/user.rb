@@ -3,9 +3,13 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
 
   has_many :posts
-  
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  validates_presence_of :first_name, :last_name       
+  validates_presence_of :first_name, :last_name   
+
+  def full_name 
+    first_name.capitalize + " " + last_name.capitalize
+  end    
 end
