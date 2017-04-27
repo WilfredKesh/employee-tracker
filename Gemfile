@@ -31,9 +31,10 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'gritter', '~> 1.2'
 gem 'administrate', github: 'greetpoint/administrate', branch: 'rails5'
 gem 'bourbon'
+gem 'kaminari', '~> 0.17.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+gem 'pundit', '~> 1.1'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
