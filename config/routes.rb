@@ -10,7 +10,11 @@ resources :admin_users
   end
 
   root to: "pages#home" 
-  resources :posts
+    resources :posts do
+    member do
+      get :approve
+    end
+  end
   
   devise_for :users, skip: [:registrations]
   
